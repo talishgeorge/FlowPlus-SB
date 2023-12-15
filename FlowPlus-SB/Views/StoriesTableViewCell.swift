@@ -27,6 +27,9 @@ class StoriesTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
         
         collectionView.delegate = self
         collectionView.dataSource = self
+
+        
+        selectionStyle = UITableViewCell.SelectionStyle.none
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

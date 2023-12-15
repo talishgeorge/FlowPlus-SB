@@ -102,7 +102,7 @@
                             <backgroundConfiguration key="background" image="Collect"/>
                         </buttonConfiguration>
                     </button>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ABp-9J-ebm">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="destination1" translatesAutoresizingMaskIntoConstraints="NO" id="ABp-9J-ebm">
                         <rect key="frame" x="0.0" y="65.999999999999972" width="599" height="449.33333333333326"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ABp-9J-ebm" secondAttribute="height" multiplier="4:3" id="P8d-ow-QeC"/>
@@ -197,6 +197,7 @@
         <image name="Comment" width="50" height="51"/>
         <image name="More" width="18" height="4"/>
         <image name="activity_tab_icon" width="52" height="48"/>
+        <image name="destination1" width="1725" height="1297"/>
         <image name="send_nav_icon" width="57" height="51"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
