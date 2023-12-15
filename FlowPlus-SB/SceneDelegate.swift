@@ -18,12 +18,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        let tabControlller = UITabBarController()
-        // Set the appearance of the tab bar
-        tabControlller.tabBar.standardAppearance = tabBarAppearance
-        // For iOS 13 and above, also set the scroll edge appearance of the tab barni
+        let tabController = setupTabBarController()
+        window.rootViewController = tabController
+        window.makeKeyAndVisible()
+        self.window = window
+    }
+    
+    func setupTabBarController() -> UITabBarController {
+        let tabController = UITabBarController()
+        tabController.tabBar.standardAppearance = tabBarAppearance
         if #available(iOS 13.0, *) {
-            tabControlller.tabBar.scrollEdgeAppearance = tabBarAppearance
+            tabController.tabBar.scrollEdgeAppearance = tabBarAppearance
         }
         
         let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
@@ -32,69 +37,39 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
         let activityStoryboard = UIStoryboard(name: "Activity", bundle: nil)
         
-        let homeVC = homeStoryboard.instantiateViewController(withIdentifier: "Home") as? HomeViewController
-        let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "Profile") as? ProfileViewController
-        let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "Search") as? SearchViewController
-        let newPostVC = newPostStoryboard.instantiateViewController(withIdentifier: "NewPost") as? NewPostViewController
-        let activitytVC = activityStoryboard.instantiateViewController(withIdentifier: "Activity") as? ActiivityViewController
+        let homeVC = homeStoryboard.instantiateViewController(withIdentifier: "Home") as! HomeViewController
+        let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "Profile") as! ProfileViewController
+        let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "Search") as! SearchViewController
+        let newPostVC = newPostStoryboard.instantiateViewController(withIdentifier: "NewPost") as! NewPostViewController
+        let activityVC = activityStoryboard.instantiateViewController(withIdentifier: "Activity") as! ActiivityViewController
         
-        var vcData: [(UIViewController, UIImage?, UIImage?)] = []
-        
-        if let homeVC = homeVC {
-            vcData.append((homeVC, UIImage(named: "home_tab_icon"), UIImage(named: "home_selected_tab_icon")))
-        }
-        if let searchVC = searchVC {
-            vcData.append((searchVC, UIImage(named: "search_tab_icon"), UIImage(named: "search_selected_tab_icon")))
-        }
-        if let newPostVC = newPostVC {
-            vcData.append((newPostVC, UIImage(named: "post_tab_icon"), UIImage(named: "post_tab_icon")))
-        }
-        if let activitytVC = activitytVC {
-            vcData.append((activitytVC, UIImage(named: "activity_tab_icon"), UIImage(named: "activity_selected_tab_icon")))
-        }
-        if let profileVC = profileVC {
-            vcData.append((profileVC, UIImage(named: "profile_tab_icon"), UIImage(named: "profile_selected_tab_icon")))
-        }
+        let vcData: [(UIViewController, UIImage?, UIImage?)] = [
+            (homeVC, UIImage(named: "home_tab_icon"), UIImage(named: "home_selected_tab_icon")),
+            (searchVC, UIImage(named: "search_tab_icon"), UIImage(named: "search_selected_tab_icon")),
+            (newPostVC, UIImage(named: "post_tab_icon"), UIImage(named: "post_tab_icon")),
+            (activityVC, UIImage(named: "activity_tab_icon"), UIImage(named: "activity_selected_tab_icon")),
+            (profileVC, UIImage(named: "profile_tab_icon"), UIImage(named: "profile_selected_tab_icon"))
+        ]
         
         let vcs = vcData.map { vc, defaultImage, selectedImage -> UINavigationController in
             let nav = UINavigationController(rootViewController: vc)
+            if let navBarAppearance = navBarAppearance {
+                nav.navigationBar.standardAppearance = navBarAppearance
+                if #available(iOS 13.0, *) {
+                    nav.navigationBar.scrollEdgeAppearance = navBarAppearance
+                }
+            }
+            
             nav.tabBarItem.image = defaultImage?.withRenderingMode(.alwaysOriginal)
             nav.tabBarItem.selectedImage = selectedImage?.withRenderingMode(.alwaysOriginal)
             return nav
         }
-        tabControlller.viewControllers = vcs
-        tabControlller.tabBar.isTranslucent = false
         
-        if #available(iOS 13.0, *) {
-            let tabBarAppearance = UITabBarAppearance()
-            tabBarAppearance.configureWithOpaqueBackground()
-            tabBarAppearance.backgroundColor = .white // Set desired background color
-            tabBarAppearance.stackedLayoutAppearance.normal.iconColor = .gray
-            tabBarAppearance.stackedLayoutAppearance.selected.iconColor = .blue
-            tabControlller.tabBar.standardAppearance = tabBarAppearance
-        } else {
-            tabControlller.tabBar.barTintColor = .white
-        }
+        tabController.viewControllers = vcs
+        tabController.tabBar.isTranslucent = false
         
-        let coloredAppearance = UINavigationBarAppearance()
-        coloredAppearance.configureWithOpaqueBackground()
-        coloredAppearance.backgroundColor = .systemBlue
-        coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        coloredAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        
-        UINavigationBar.appearance().standardAppearance = coloredAppearance
-        UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
-        
-        
-        window.rootViewController = tabControlller
-        print("Root view controller: \(window.rootViewController)")
-        if #available(iOS 13.0, *) {
-            window.overrideUserInterfaceStyle = .light
-        }
-        window.makeKeyAndVisible()
-        self.window = window
+        return tabController
     }
-    
     /// Creates a customized navigation bar appearance.
     /// - Returns: The customized UINavigationBarAppearance object.
     static func createNavBarAppearance() -> UINavigationBarAppearance? {
@@ -112,6 +87,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         tabBarAppearance.configureWithOpaqueBackground()
         tabBarAppearance.backgroundColor = .systemGray6
         return tabBarAppearance
+    }
+    
+    func setupNavBarAppearance() -> UINavigationBarAppearance {
+        let coloredAppearance = UINavigationBarAppearance()
+        coloredAppearance.configureWithOpaqueBackground()
+        coloredAppearance.backgroundColor = .systemBlue
+        coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        coloredAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        return coloredAppearance
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
