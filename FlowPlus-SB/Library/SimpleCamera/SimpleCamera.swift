@@ -21,6 +21,7 @@
 import AVFoundation
 
 import Photos
+import UIKit
 
 /*
  AVCaptureSession.startRunning() is a blocking call which can
