@@ -10,60 +10,11 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    //var window: UIWindow?
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        var window: UIWindow?
+        //window = UIWindow(frame: UIScreen.main.bounds)
         // Override point for customization after application launch.
-        let tabControlller = UITabBarController()
-        
-        let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        let searchStoryboard = UIStoryboard(name: "Search", bundle: nil)
-        
-        let newPostStoryboard = UIStoryboard(name: "NewPost", bundle: nil)
-        
-        let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
-        
-        let activityStoryboard = UIStoryboard(name: "Activity", bundle: nil)
-        
-        let homeVC = homeStoryboard.instantiateViewController(withIdentifier: "Home") as! HomeViewController
-        let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "Profile") as! ProfileViewController
-        let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "Search") as! SearchViewController
-        let newPostVC = newPostStoryboard.instantiateViewController(withIdentifier: "NewPost") as! NewPostViewController
-        let activitytVC = activityStoryboard.instantiateViewController(withIdentifier: "Activity") as! ActiivityViewController
-        
-        let vcData: [(UIViewController, UIImage, UIImage)] = [
-            (homeVC, UIImage(named: "home_tab_icon")!, UIImage(named: "home_selected_tab_icon")!),
-            (searchVC, UIImage(named: "search_tab_icon")!, UIImage(named: "search_selected_tab_icon")!),
-            (newPostVC, UIImage(named: "post_tab_icon")!, UIImage(named: "post_tab_icon")!),
-            (activitytVC, UIImage(named: "activity_tab_icon")!, UIImage(named: "activity_selected_tab_icon")!),
-            (searchVC, UIImage(named: "profile_tab_icon")!, UIImage(named: "profile_selected_tab_icon")!),
-        ]
-        
-        let vcs = vcData.map { vc, _, selectedImage -> UINavigationController in
-            let nav = UINavigationController(rootViewController: vc)
-            nav.tabBarItem.image = selectedImage
-            nav.tabBarItem.selectedImage = selectedImage
-            return nav
-        }
-        
-        tabControlller.viewControllers = vcs
-        tabControlller.tabBar.isTranslucent = false
-        
-        if let items = tabControlller.tabBar.items {
-            for item in items {
-                if let image = item.image {
-                    item.image = image.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
-                }
-                if let selectedImage = item.selectedImage {
-                    item.selectedImage = selectedImage.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
-                }
-                
-                item.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
-            }
-        }
-        
-        UINavigationBar.appearance().backgroundColor = UIColor.white
-        window?.rootViewController = tabControlller
-        window?.makeKeyAndVisible()
         return true
     }
     
