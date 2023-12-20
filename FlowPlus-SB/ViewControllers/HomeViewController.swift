@@ -20,26 +20,33 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.estimatedRowHeight = CGFloat(88.0)
+        
         tableView.rowHeight = UITableView.automaticDimension
         
         tableView.register(UINib(nibName: "FeedTableViewCell", bundle: nil), forCellReuseIdentifier: "FeedTableViewCell")
+        
         tableView.register(UINib(nibName: "StoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "StoriesTableViewCell")
+        
         tableView.dataSource = self
+        
         tableView.delegate = self
         
         tableView.tableFooterView = UIView()
         
         var rightBarItemImage = UIImage(named: "send_nav_icon")
+        
         rightBarItemImage = rightBarItemImage?.withRenderingMode(.alwaysOriginal)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: rightBarItemImage, style: .plain, target: nil, action: nil)
         
         var leftBarItemImage = UIImage(named: "camera_nav_icon")
+        
         leftBarItemImage = leftBarItemImage?.withRenderingMode(.alwaysOriginal)
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: leftBarItemImage, style: .plain, target: nil, action: nil)
         
-        var profileImageView = UIImageView(image: UIImage(named: "logo_nav_icon"))
+        let profileImageView = UIImageView(image: UIImage(named: "logo_nav_icon"))
+        
         self.navigationItem.titleView = profileImageView
         
     }
@@ -54,31 +61,44 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 0 {
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "StoriesTableViewCell") as! StoriesTableViewCell
+            
             return cell
+            
         }
         
-      let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell") as! FeedTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell") as! FeedTableViewCell
         
-        let currentIndexPath = indexPath.row - 1
+        let currentIndex = indexPath.row - 1
         
-        let postData = posts[currentIndexPath]
+        let postData = posts[currentIndex]
+        
         cell.profileImage.image = postData.user.profileImage
         
         cell.postImage.image = postData.postImage
-
+        
         cell.dateLabel.text = postData.datePosted
         
         cell.likesCountLabel.text = "\(postData.likesCount) likes"
         
         cell.postCommentLabel.text = postData.postComment
+        
         cell.userNameTitleButton.setTitle(postData.user.name, for: .normal)
+        
         cell.commentCountButton.setTitle("View all \(postData.commentCount) comments", for: .normal)
+        
         return cell
     }
     
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+               return 100
+           } else {
+               return 685
+           }
+    }
 }
 
 //#Preview("HomeViewController") {

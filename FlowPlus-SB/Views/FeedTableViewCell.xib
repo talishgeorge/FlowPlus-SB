@@ -189,7 +189,7 @@
                 <outlet property="profileImage" destination="Upt-lC-f8D" id="ILF-dh-Aay"/>
                 <outlet property="userNameTitleButton" destination="UM6-k9-fsM" id="FWp-Iw-7Bn"/>
             </connections>
-            <point key="canvasLocation" x="138.1679389312977" y="19.366197183098592"/>
+            <point key="canvasLocation" x="-7" y="-26"/>
         </tableViewCell>
     </objects>
     <resources>
