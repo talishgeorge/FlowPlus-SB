@@ -93,12 +93,21 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
-               return 100
-           } else {
-               return 685
-           }
+//        if indexPath.row == 0 {
+//               return 110
+//           } else {
+//               return 685
+//           }
+        return UITableView.automaticDimension
     }
+    
+//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//        if indexPath.row == 0 {
+//            return 110
+//        } else {
+//            return 685
+//        }
+//    }
 }
 
 //#Preview("HomeViewController") {

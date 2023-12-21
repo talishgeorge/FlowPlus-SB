@@ -16,11 +16,14 @@ class StoryCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        storyImage.layer.cornerRadius = storyImage.frame.width/2
-        storyImage.layer.masksToBounds = true
+        //storyImage.layer.cornerRadius = storyImage.frame.width/2
+        //storyImage.layer.masksToBounds = true
+        //storyImage.clipsToBounds = true
         storyImage.layer.borderColor = UIColor.white.cgColor
         storyImage.layer.borderWidth = CGFloat(3.0)
     }
-    
-    
+    override func layoutSubviews() {
+           super.layoutSubviews()
+           storyImage.layer.cornerRadius = storyImage.frame.width / 2
+       }
 }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		830F2F8C2B2C9204009CED90 /* FeedTableViewCell123.xib in Resources */ = {isa = PBXBuildFile; fileRef = 830F2F8B2B2C9204009CED90 /* FeedTableViewCell123.xib */; };
 		83A4C7602B28979F0006D862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C75F2B28979F0006D862 /* AppDelegate.swift */; };
 		83A4C7622B28979F0006D862 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C7612B28979F0006D862 /* SceneDelegate.swift */; };
 		83A4C7642B28979F0006D862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C7632B28979F0006D862 /* ViewController.swift */; };
@@ -59,7 +58,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		830F2F8B2B2C9204009CED90 /* FeedTableViewCell123.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableViewCell123.xib; sourceTree = "<group>"; };
 		83A4C75C2B28979F0006D862 /* FlowPlus-SB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FlowPlus-SB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A4C75F2B28979F0006D862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A4C7612B28979F0006D862 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -233,7 +231,6 @@
 		83D6664F2B2C1B1600C94237 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				830F2F8B2B2C9204009CED90 /* FeedTableViewCell123.xib */,
 				83D666502B2C1B6200C94237 /* StoriesTableViewCell.swift */,
 				83D666512B2C1B6200C94237 /* StoriesTableViewCell.xib */,
 				83D666542B2C1E8300C94237 /* StoryCollectionViewCell.swift */,
@@ -356,7 +353,6 @@
 				83D666572B2C1E8300C94237 /* StoryCollectionViewCell.xib in Resources */,
 				83A4C79A2B2939F10006D862 /* Search.storyboard in Resources */,
 				83D666532B2C1B6200C94237 /* StoriesTableViewCell.xib in Resources */,
-				830F2F8C2B2C9204009CED90 /* FeedTableViewCell123.xib in Resources */,
 				83A4C79E2B293A180006D862 /* Profile.storyboard in Resources */,
 				83A4C7A02B293A230006D862 /* Activity.storyboard in Resources */,
 			);
