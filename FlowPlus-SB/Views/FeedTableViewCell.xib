@@ -47,10 +47,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </stackView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nz1-jM-bgY" userLabel="Image Stackview ">
+                    <stackView opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nz1-jM-bgY" userLabel="Image Stackview ">
                         <rect key="frame" x="0.0" y="54.333333333333343" width="599" height="449.33333333333326"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="destination1" translatesAutoresizingMaskIntoConstraints="NO" id="ABp-9J-ebm">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="destination1" translatesAutoresizingMaskIntoConstraints="NO" id="ABp-9J-ebm">
                                 <rect key="frame" x="0.0" y="0.0" width="599" height="449.33333333333331"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="449.32999999999998" id="jRF-1f-Y14"/>
@@ -63,29 +63,29 @@
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5nq-aP-0Iw" userLabel="Love Stackview">
                         <rect key="frame" x="15" y="508.66666666666674" width="569" height="40"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9d-9X-axo" userLabel="Love Button">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9d-9X-axo" userLabel="Love Button">
                                 <rect key="frame" x="0.0" y="0.0" width="24" height="40"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="activity_tab_icon"/>
+                                    <backgroundConfiguration key="background" image="activity_tab_icon" imageContentMode="scaleAspectFit"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAC-55-Oxk" userLabel="Comments Button">
-                                <rect key="frame" x="39" y="0.0" width="75" height="40"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button">
-                                    <backgroundConfiguration key="background" image="Comment"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5R3-3I-C2y" userLabel="Insta Button">
-                                <rect key="frame" x="129" y="0.0" width="24" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAC-55-Oxk" userLabel="Comments Button">
+                                <rect key="frame" x="39" y="0.0" width="24" height="40"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="send_nav_icon"/>
+                                    <backgroundConfiguration key="background" image="Comment" imageContentMode="scaleAspectFit"/>
                                 </buttonConfiguration>
                             </button>
-                            <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IRG-dh-eRF" userLabel="Spacer view">
-                                <rect key="frame" x="168" y="0.0" width="362" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5R3-3I-C2y" userLabel="Insta Button">
+                                <rect key="frame" x="78" y="0.0" width="24" height="40"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="send_nav_icon" imageContentMode="scaleAspectFit"/>
+                                </buttonConfiguration>
+                            </button>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="IRG-dh-eRF" userLabel="Spacer view">
+                                <rect key="frame" x="117" y="0.0" width="413" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="tVn-cT-ij5"/>
@@ -95,44 +95,36 @@
                                 <rect key="frame" x="545" y="0.0" width="24" height="40"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="Collect"/>
+                                    <backgroundConfiguration key="background" image="Collect" imageContentMode="scaleAspectFit"/>
                                 </buttonConfiguration>
                             </button>
                         </subviews>
                     </stackView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="w1I-xR-puQ">
-                        <rect key="frame" x="35" y="554.66666666666663" width="529" height="115.33333333333337"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="w1I-xR-puQ" userLabel="Bottom Stackview">
+                        <rect key="frame" x="15" y="554.66666666666663" width="549" height="115.33333333333337"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300 Likes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTF-BI-5Za">
-                                <rect key="frame" x="0.0" y="0.0" width="529" height="20.333333333333332"/>
+                                <rect key="frame" x="0.0" y="0.0" width="549" height="20.333333333333332"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Comment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QH4-xl-gxs">
-                                <rect key="frame" x="0.0" y="28.333333333333371" width="529" height="20.333333333333329"/>
+                                <rect key="frame" x="0.0" y="28.333333333333371" width="549" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAi-F9-kb9">
-                                <rect key="frame" x="0.0" y="56.66666666666675" width="529" height="30.333333333333336"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAi-F9-kb9">
+                                <rect key="frame" x="0.0" y="56.66666666666675" width="549" height="30.333333333333336"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="View Comments">
-                                            <attributes>
-                                                <font key="NSFont" size="14" name="Helvetica"/>
-                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <buttonConfiguration key="configuration" style="plain" title="View Comments">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                     <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Sept" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRU-81-llf">
-                                <rect key="frame" x="0.0" y="95" width="529" height="20.333333333333329"/>
+                                <rect key="frame" x="0.0" y="95" width="549" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -147,7 +139,7 @@
                     <constraint firstItem="5nq-aP-0Iw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="E31-ZP-p3U"/>
                     <constraint firstAttribute="trailing" secondItem="Nz1-jM-bgY" secondAttribute="trailing" id="GhU-JS-iR1"/>
                     <constraint firstItem="w1I-xR-puQ" firstAttribute="top" secondItem="5nq-aP-0Iw" secondAttribute="bottom" constant="6" id="NGk-0D-gaY"/>
-                    <constraint firstItem="w1I-xR-puQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="OHL-0V-mro"/>
+                    <constraint firstItem="w1I-xR-puQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="OHL-0V-mro"/>
                     <constraint firstAttribute="trailing" secondItem="5nq-aP-0Iw" secondAttribute="trailing" constant="15" id="POL-Qh-Ry5"/>
                     <constraint firstItem="jSq-8q-eA5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="XQ0-Yu-Mfa"/>
                     <constraint firstAttribute="trailingMargin" secondItem="w1I-xR-puQ" secondAttribute="trailing" constant="15" id="dpr-et-mIQ"/>
