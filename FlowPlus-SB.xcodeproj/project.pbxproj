@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		837CDA282B6CFEAA003D4E11 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837CDA272B6CFEAA003D4E11 /* CustomSegmentedControl.swift */; };
+		837CDA302B6D19BA003D4E11 /* CustomSegmentedControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 837CDA2F2B6D19BA003D4E11 /* CustomSegmentedControl.xib */; };
 		83A4C7602B28979F0006D862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C75F2B28979F0006D862 /* AppDelegate.swift */; };
 		83A4C7622B28979F0006D862 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C7612B28979F0006D862 /* SceneDelegate.swift */; };
 		83A4C7642B28979F0006D862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C7632B28979F0006D862 /* ViewController.swift */; };
@@ -58,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		837CDA272B6CFEAA003D4E11 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomSegmentedControl.swift; path = CustomSegmentedView/CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		837CDA2F2B6D19BA003D4E11 /* CustomSegmentedControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentedControl.xib; sourceTree = "<group>"; };
 		83A4C75C2B28979F0006D862 /* FlowPlus-SB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FlowPlus-SB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A4C75F2B28979F0006D862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A4C7612B28979F0006D862 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +124,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		837CDA262B6CFE07003D4E11 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				837CDA272B6CFEAA003D4E11 /* CustomSegmentedControl.swift */,
+				837CDA2F2B6D19BA003D4E11 /* CustomSegmentedControl.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		83A4C7532B28979F0006D862 = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +244,7 @@
 		83D6664F2B2C1B1600C94237 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				837CDA262B6CFE07003D4E11 /* CustomViews */,
 				83D666502B2C1B6200C94237 /* StoriesTableViewCell.swift */,
 				83D666512B2C1B6200C94237 /* StoriesTableViewCell.xib */,
 				83D666542B2C1E8300C94237 /* StoryCollectionViewCell.swift */,
@@ -348,6 +362,7 @@
 				83A4C76F2B2897A10006D862 /* LaunchScreen.storyboard in Resources */,
 				83D6665B2B2C276F00C94237 /* FeedTableViewCell.xib in Resources */,
 				83A4C79C2B293A000006D862 /* NewPost.storyboard in Resources */,
+				837CDA302B6D19BA003D4E11 /* CustomSegmentedControl.xib in Resources */,
 				83A4C76C2B2897A10006D862 /* Assets.xcassets in Resources */,
 				83A4C7982B2939CE0006D862 /* Home.storyboard in Resources */,
 				83D666572B2C1E8300C94237 /* StoryCollectionViewCell.xib in Resources */,
@@ -380,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D6664E2B2C194E00C94237 /* SimpleCameraProtocol.swift in Sources */,
+				837CDA282B6CFEAA003D4E11 /* CustomSegmentedControl.swift in Sources */,
 				83D666522B2C1B6200C94237 /* StoriesTableViewCell.swift in Sources */,
 				83D666462B2C15BE00C94237 /* ActivityData.swift in Sources */,
 				83A4C7A52B293AE60006D862 /* SearchViewController.swift in Sources */,

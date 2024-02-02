@@ -8,22 +8,16 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
+    var segmentedControl: CustomSegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        segmentedControl = CustomSegmentedControl(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+        segmentedControl.layer.cornerRadius = 15
+        segmentedControl.backgroundColor = .white
+        segmentedControl.clipsToBounds = true
+        segmentedControl.setButtonTitles(buttonTitles: ["Option 1", "Option 2"])
+        segmentedControl.center = view.center
+        view.addSubview(segmentedControl)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
